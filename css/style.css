@@ -1,0 +1,33 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	--index: calc(1vw + 1vh);
+	--transition: 1.25s cubic-bezier(.2, .6, 0, 1);
+}
+
+html, body {
+	height: 100%;
+	overflow: hidden;
+}
+
+.main-wrapper {
+	height: 100%;
+	display: flex;
+	gap: var(--index);
+	background-image: url(../img/bg.jpg);
+	background-size: cover;
+	background-position: center;
+}
+
+.slider__item {
+	width: 21vw;
+	margin-bottom: calc(var(--index) * 2.6);
+	cursor: pointer;
+	transition: transform var(--transition);
+	will-change: transform;
+	box-shadow: rgb(0 0 0 / .15) 0 0 30px 10px;
+}
